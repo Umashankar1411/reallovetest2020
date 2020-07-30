@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pink"
+    tools:context=".home">
+
+    <RelativeLayout
+        android:id="@+id/datalayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:background="@drawable/bottompng"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:textSize="22sp"
+                    android:textColor="@color/fontcolor"
+                    android:gravity="center"
+                    android:fontFamily="@font/futura_bold"
+                    android:text="@string/calculatelove"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/malevector" />
+
+                <EditText
+                    android:id="@+id/boyname"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:paddingTop="3dp"
+                    android:background="#FF94BB"
+                    android:gravity="center"
+                    android:textColor="@color/fontcolor"
+                    android:fontFamily="@font/futura_bold"
+                    android:textSize="20sp"
+                    android:hint="ENTER BOY NAME"
+                    android:textColorHint="@color/fontcolorhint"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/femalevector" />
+
+                <EditText
+                    android:id="@+id/girlname"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:paddingTop="3dp"
+                    android:background="#FF94BB"
+                    android:gravity="center"
+                    android:textColor="@color/fontcolor"
+                    android:fontFamily="@font/futura_bold"
+                    android:textSize="20sp"
+                    android:hint="ENTER GIRL NAME"
+                    android:textColorHint="@color/fontcolorhint"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:id="@+id/submitbtn"
+                    android:layout_width="150sp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="center"
+                    android:text="SUBMIT"
+                    android:onClick="Submitbt"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/futura_bold"
+                    android:textColor="@color/fontcolor"
+                    android:background="#A8B2E6"
+                    android:layout_marginTop="30dp"/>
+
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/banerAd">
+                </com.google.android.gms.ads.AdView>
+
+                <ImageView
+                    android:id="@+id/shareImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/share"
+                    android:layout_marginTop="8dp"
+                    android:onClick="share"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/resultlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:background="@drawable/bottompng"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:gravity="end">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/try_again"
+                    android:onClick="Back"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/futura_bold"
+                    android:textColor="@color/fontcolor"
+                    android:textSize="18sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:textSize="24sp"
+                android:textColor="@color/fontcolor"
+                android:gravity="center"
+                android:fontFamily="@font/futura_bold"
+                android:text="@string/yourlovematch"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/malevector"/>
+
+                    <TextView
+                        android:id="@+id/boynametext"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/futura_bold"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/fontcolor"
+                        android:text="VISHAL KUSHWAH"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/heart"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:background="@drawable/femalevector"/>
+
+                    <TextView
+                        android:id="@+id/girlnametext"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/futura_bold"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/fontcolor"
+                        android:text="VISHAL KUSHWAH"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pb"
+                android:visibility="visible"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/futura_bold"
+                android:paddingHorizontal="4dp"
+                android:text="70%"
+                android:textColor="@color/fontcolor"
+                android:textSize="66sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
